@@ -27,25 +27,27 @@ def green_toggle():
 def red_toggle():
     if red.is_lit:
         red.off()
-        red_btn["text"] = "Green >> off"
+        red_btn["text"] = "Red >> off"
     else:
         red.on()
-        green_btn["text"] = "Green >> on"
+        green_btn["text"] = "Red >> on"
         
 def yellow_toggle():
     if yellow.is_lit:
         yellow.off()
-        yellow_btn["text"] = "Green >> off"
+        yellow_btn["text"] = "Yellow >> off"
     else:
         yellow.on()
-        yellow_btn["text"] = "Green >> on"
+        yellow_btn["text"] = "Yellow >> on"
 
 ### Widgets ###
 green_btn = Button(win,text = "Green >> off",font = myFont, command = green_toggle,bg = 'bisque2',height = 1,width =24)
 red_btn = Button(win,text = "red >> off",font = myFont, command = red_toggle,bg = 'bisque2',height = 1,width =24)
 yellow_btn = Button(win,text = "yellow >> off",font = myFont, command = yellow_toggle,bg = 'bisque2',height = 1,width =24)
+exit_btn = Button(win,text = "Exit",font = myFont, command = win.destroy,bg = 'red',height = 1,width =12)
 
 green_btn.grid(row=0,column=1)
 red_btn.grid(row=1,column=1)
 yellow_btn.grid(row=2,column=1)
+exit_btn.grid(row=3,column=1)
 
